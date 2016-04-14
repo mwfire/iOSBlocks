@@ -1,82 +1,13 @@
-{
-  "name": "iOSBlocks",
-  "version": "1.2",
-  "summary": "Objective-C block replacement for some Cocoa Touch APIs depending on delegation.",
-  "homepage": "https://github.com/dzenbot/iOSBlocks",
-  "license": {
-    "type": "MIT",
-    "file": "LICENSE"
-  },
-  "authors": {
-    "Ignacio Romero Z.": "iromero@dzen.cl"
-  },
-  "source": {
-    "git": "https://github.com/dzenbot/iOSBlocks.git",
-    "tag": "v1.2"
-  },
-  "platforms": {
-    "ios": "5.0"
-  },
-  "requires_arc": true,
-  "default_subspecs": "Cocoa",
-  "header_mappings_dir": "Source",
-  "deprecated": true,
-  "subspecs": [
-    {
-      "name": "Cocoa",
-      "source_files": [
-        "Source/iOSBlocks.h",
-        "Source/iOSBlocksProtocol.h"
-      ],
-      "dependencies": {
-        "iOSBlocks/CoreLocation": [
-
-        ],
-        "iOSBlocks/Foundation": [
-
-        ],
-        "iOSBlocks/MessageUI": [
-
-        ],
-        "iOSBlocks/UIKit": [
-
-        ]
-      }
-    },
-    {
-      "name": "CoreLocation",
-      "source_files": [
-        "Source/CoreLocation/*.{h,m}",
-        "Source/iOSBlocksProtocol.h"
-      ],
-      "frameworks": "CoreLocation"
-    },
-    {
-      "name": "Foundation",
-      "source_files": [
-        "Source/Foundation/*.{h,m}",
-        "Source/iOSBlocksProtocol.h"
-      ],
-      "frameworks": "Foundation"
-    },
-    {
-      "name": "MessageUI",
-      "source_files": [
-        "Source/MessageUI/*.{h,m}",
-        "Source/iOSBlocksProtocol.h"
-      ],
-      "frameworks": "MessageUI"
-    },
-    {
-      "name": "UIKit",
-      "source_files": [
-        "Source/UIKit/*.{h,m}",
-        "Source/iOSBlocksProtocol.h"
-      ],
-      "frameworks": [
-        "UIKit",
-        "MobileCoreServices"
-      ]
-    }
-  ]
-}
+Pod::Spec.new do |s|
+  s.name         = "iOSBlocks"
+  s.version      = "1.0.1"
+  s.summary      = "Objective-C block replacement for some Cocoa Touch APIs depending on delegation."
+  s.homepage     = "https://github.com/dzenbot/iOSBlocks"
+  s.license      = { :type => 'MIT', :file => 'LICENSE' }
+  s.author       = { "Ignacio Romero Z." => "iromero@dzen.cl" }
+  s.platform     = :ios, '5.0'
+  s.source       = { :git => "https://github.com/dzenbot/iOSBlocks.git", :tag => "v1.0.1" }
+  s.source_files  = 'Classes', 'Source/**/*.{h,m}'
+  s.frameworks = 'MapKit', 'CoreLocation', 'MessageUI', 'MobileCoreServices', 'UIKit', 'CoreGraphics'
+  s.requires_arc = true
+end
