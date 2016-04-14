@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "iOSBlocks"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "Objective-C block replacement for some Cocoa Touch APIs depending on delegation."
   s.homepage     = "https://github.com/dzenbot/iOSBlocks"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
